@@ -80,7 +80,64 @@ public class Binary
 		
 	}
 
-	public static Binary or(Binary num1, Binary num2){
+	public static Binary or(Binary num1,Binary num2)
+	{
+		// Takes string containing bits for num1; parses the string into an integer.
+		// Specified that the binary numeric system is being used within the second argument (radix 2),
+		// converting it to decimal system (radix 10).
+		int dec1 = Integer.parseInt(num1.number, 2);
+		// Takes string containing bits for num2; converts to decimal.
+		int dec2 = Integer.parseInt(num2.number, 2);
+
+		// Bitwise OR operation for two integers is performed and stored within decResult.
+		int decResult = dec1 | dec2;
+
+		// Creates a binary object with value of previous calculation (the value is first converted
+		// to a binary string before it is passed to the constructor.
+		Binary result = new Binary(Integer.toBinaryString(decResult));
+		return result;
+		
+	}
+
+	public static Binary and(Binary num1,Binary num2)
+	{
+		// Takes string containing bits for num1; parses the string into an integer.
+		// Specified that the binary numeric system is being used within the second argument (radix 2),
+		// converting it to decimal system (radix 10).
+		int dec1 = Integer.parseInt(num1.number, 2);
+		// Takes string containing bits for num2; converts to decimal.
+		int dec2 = Integer.parseInt(num2.number, 2);
+
+		// Bitwise AND operation for two integers is performed and stored within decResult.
+		int decResult = dec1 & dec2;
+
+		// Creates a binary object with value of previous calculation (the value is first converted
+		// to a binary string before it is passed to the constructor.
+		Binary result = new Binary(Integer.toBinaryString(decResult));
+		return result;
+		
+	}
+	
+	public static Binary multiply(Binary num1,Binary num2)
+	{
+		// Takes string containing bits for num1; parses the string into an integer.
+		// Specified that the binary numeric system is being used within the second argument (radix 2),
+		// converting it to decimal system (radix 10).
+		int dec1 = Integer.parseInt(num1.number, 2);
+		// Takes string containing bits for num2; converts to decimal.
+		int dec2 = Integer.parseInt(num2.number, 2);
+
+		// Integer multiplication is performed and stored within decResult.
+		int decResult = dec1 * dec2;
+
+		// Creates a binary object with value of previous calculation (the value is first converted
+		// to a binary string before it is passed to the constructor.
+		Binary result = new Binary(Integer.toBinaryString(decResult));
+		return result;
+	}
+
+	public static Binary bitWiseOr(Binary num1, Binary num2)
+	{
 		// the index of the first digit of each number
 		int ind1=num1.number.length()-1;
 		int ind2=num2.number.length()-1;
@@ -105,7 +162,8 @@ public class Binary
 		return result;
 	}
 
-	public static Binary and(Binary num1, Binary num2){
+	public static Binary bitWiseAnd(Binary num1, Binary num2)
+	{
 		// the index of the first digit of each number
 		int ind1=num1.number.length()-1;
 		int ind2=num2.number.length()-1;
@@ -134,18 +192,28 @@ public class Binary
 		return result;
 	}
 
-	public static Binary multiply(Binary num1, Binary num2){
-		String bin1 = num1.getValue();
-		String bin2 = num2.getValue();
+	public static Binary bitWiseMultiply(Binary num1, Binary num2)
+	{
+		// the index of the first digit of each number
+		int ind1=num1.number.length()-1;
+		int ind2=num2.number.length()-1;
 
-		int dec1 = Integer.parseInt(bin1,2);
-		int dec2 = Integer.parseInt(bin2,2);
+		Binary result = new Binary("0");
 
-		int decResult = dec1 * dec2;
+		Binary largeNum = (ind1>=ind2)? num1:num2;
+		Binary smallNum = (largeNum==num1)? num2:num1;
 
-		String bin = Integer.toBinaryString(decResult);
+		num1 = largeNum;
+		num2 = smallNum;
 
-		Binary result=new Binary(bin);  // create a binary object with the calculated value.
-		return result;
+		for(int i=smallNum.number.length()-1; i>=0; i--)
+		{
+			if(smallNum.number.charAt(i)=='1'){
+				result = add(result,num1);
+			}
+			num1.number+="0";
+		}
+
+		return result;	
 	}
 }	
