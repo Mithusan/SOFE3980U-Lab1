@@ -1,5 +1,13 @@
 # Lab 1: Software Project Management and Comprehension Tool (Apache Maven)
 
+[App.java](https://github.com/Mithusan/SOFE3980U-Lab1/blob/main/src/main/java/com/ontariotechu/sofe3980U/App.java)
+
+
+[Binary.java](https://github.com/Mithusan/SOFE3980U-Lab1/blob/main/src/main/java/com/ontariotechu/sofe3980U/Binary.java)
+
+
+[Binary Test.java](https://github.com/Mithusan/SOFE3980U-Lab1/blob/main/src/test/java/com/ontariotechu/sofe3980U/BinaryTest.java)
+
 ### Group Members
 | Full Name | ID | Email|
 | --- | --- | ---|
