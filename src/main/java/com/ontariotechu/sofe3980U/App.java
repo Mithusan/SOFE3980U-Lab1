@@ -29,7 +29,7 @@ public class App
 		System.out.println("\nEnter another binary number:");
 		Binary binary2=new Binary(input.next());
 
-        System.out.println( "First binary number is: "+binary1.getValue());
+        System.out.println( "\nFirst binary number is: "+binary1.getValue());
         System.out.println( "Second binary number is: "+binary2.getValue());
 
 		System.out.println("\n***********************************************\n");
