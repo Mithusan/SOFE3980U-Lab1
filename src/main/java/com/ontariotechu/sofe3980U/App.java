@@ -10,7 +10,7 @@ public class App
 {
 	/**
 	* Main program:  The entry point of the program. The local time will be printed first,
-	*      Then it will create two binary variables, and perform 4 operations: add, bitwise OR, bitwise AND
+	*      Then it will create two binary variables, and perform 4 operations: add, bitwise OR, bitwise AND,
 	*      and  multuply. Results will be printed to the console.
 	*
 	* @param args: not used
