@@ -3,14 +3,15 @@ package com.ontariotechu.sofe3980U;
 import org.joda.time.LocalTime;
 
 /**
- * Hello world!
+ * Binary Calculator
  *
  */
 public class App 
 {
 	/**
 	* Main program:  The entry point of the program. The local time will be printed first,
-	*      Then it will create two binary variables, add them and print the result.
+	*      Then it will create two binary variables, and perform 4 operations: add, bitwise OR, bitwise AND
+	*      and  multuply. Results will be printed to the console.
 	*
 	* @param args: not used
 	*/
