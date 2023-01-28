@@ -10,7 +10,7 @@ import org.junit.Test;
 public class BinaryTest 
 {
     /**
-     * Test The constructor with a valid binary vallue
+     * Test The constructor with a valid binary value
      */
     @Test
     public void normalConstructor()
