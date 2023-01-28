@@ -85,7 +85,7 @@ public class Binary
 	 *
 	 * @param num1 The first addend object
 	 * @param num2 The second addend object
-	 * @return A binary variable with a value of <i>num1+num2</i>.
+	 * @return A binary variable with a value of <i>num1|num2</i>.
 	 */
 	public static Binary or(Binary num1,Binary num2)
 	{
@@ -111,7 +111,7 @@ public class Binary
 	 *
 	 * @param num1 The first addend object
 	 * @param num2 The second addend object
-	 * @return A binary variable with a value of <i>num1+num2</i>.
+	 * @return A binary variable with a value of <i>num1&num2</i>.
 	 */
 	public static Binary and(Binary num1,Binary num2)
 	{
@@ -137,7 +137,7 @@ public class Binary
 	 *
 	 * @param num1 The first addend object
 	 * @param num2 The second addend object
-	 * @return A binary variable with a value of <i>num1+num2</i>.
+	 * @return A binary variable with a value of <i>num1xnum2</i>.
 	 */
 	public static Binary multiply(Binary num1,Binary num2)
 	{
@@ -162,7 +162,7 @@ public class Binary
 	 *
 	 * @param num1 The first addend object
 	 * @param num2 The second addend object
-	 * @return A binary variable with a value of <i>num1+num2</i>.
+	 * @return A binary variable with a value of <i>num1|num2</i>.
 	 */
 	public static Binary bitWiseOr(Binary num1, Binary num2)
 	{
@@ -209,7 +209,7 @@ public class Binary
 	 *
 	 * @param num1 The first addend object
 	 * @param num2 The second addend object
-	 * @return A binary variable with a value of <i>num1+num2</i>.
+	 * @return A binary variable with a value of <i>num1&num2</i>.
 	 */
 	public static Binary bitWiseAnd(Binary num1, Binary num2)
 	{
@@ -259,7 +259,7 @@ public class Binary
 	 *
 	 * @param num1 The first addend object
 	 * @param num2 The second addend object
-	 * @return A binary variable with a value of <i>num1+num2</i>.
+	 * @return A binary variable with a value of <i>num1xnum2</i>.
 	 */
 	public static Binary bitWiseMultiply(Binary num1, Binary num2)
 	{
