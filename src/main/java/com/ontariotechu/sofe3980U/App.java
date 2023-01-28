@@ -24,7 +24,7 @@ public class App
 		System.out.println("BINARY CALCULATOR");
 		System.out.println("The current local time is: " + currentTime);
 		System.out.println("\n----------------------------------------------\n");
-		System.out.println("\nEnter a binary number:");
+		System.out.println("Enter a binary number:");
 		Binary binary1=new Binary(input.next());
 		System.out.println("\nEnter another binary number:");
 		Binary binary2=new Binary(input.next());
